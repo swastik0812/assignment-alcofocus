@@ -11,7 +11,6 @@ router.post('/users',async function(req,res){
        sendWelcomeEmail(user.email,user.name)
         res.status(200).send(resp)
     }catch(e){
-        console.log(e);
      res.status(400).send(e);
        
    }
@@ -20,7 +19,6 @@ router.post('/users',async function(req,res){
 router.get('/users/allusers',async function(req,res){
     try{
         const response= await User.find({});
-        console.log(response);
         if(!response[0]){
             res.status(404).send();
         }

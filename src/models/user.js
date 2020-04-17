@@ -9,7 +9,6 @@ const userSchema = mongoose.Schema({
     },
     email :{
         type : String,
-        unique :true,
         trim : true,
         required : true,
         validate(value){
