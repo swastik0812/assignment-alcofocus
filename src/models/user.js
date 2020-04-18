@@ -9,6 +9,7 @@ const userSchema = mongoose.Schema({
     },
     email :{
         type : String,
+        unique:true,
         trim : true,
         required : true,
         validate(value){
@@ -30,6 +31,9 @@ const userSchema = mongoose.Schema({
     DOB:{
         type:Date,
         require :true
+    },
+    photo:{
+        type:Buffer
     }
 })
 
